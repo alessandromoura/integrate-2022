@@ -3,16 +3,17 @@ name: Azure RM
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./
+    
     steps:
     
     # Checkout code
     - uses: actions/checkout@main
-    - name: Setup Working Dir
-      working-directory: ./
     - name: Dir Files
       run: |
         dir
-        
     
     # Log into Azure
     - uses: azure/login@v1
