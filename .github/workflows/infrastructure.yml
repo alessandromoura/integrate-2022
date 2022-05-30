@@ -19,5 +19,5 @@ jobs:
       with:
         subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
         resourceGroupName: ${{ secrets.AZURE_RG }}
-        template: Infrastructure/deploy-storaceaccount.bicep
-        parameters: Infrastructure/deploy-storageaccount-parameters-dev.json
+        template: ./integrate-2022/Infrastructure/deploy-storaceaccount.bicep
+        parameters: ./integrate-2022/Infrastructure/deploy-storageaccount-parameters-dev.json
